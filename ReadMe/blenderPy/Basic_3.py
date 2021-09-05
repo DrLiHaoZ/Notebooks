@@ -3,7 +3,7 @@ import bpy
 positions = (0,1,1),(4,1,6,),(3,-5,1),(3,10,1)
 start_pos = (0,0,0)
 
-ob = bpy.data.object["Sphere"]
+ob = bpy.data.objects["Sphere"]
 
 frame_num = 0
 

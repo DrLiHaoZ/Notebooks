@@ -1,29 +1,18 @@
-```mermaid
-
-gantt
-    dateFormat  YYYY-MM-DD
-    axisFormat  %m-%d
-    todayMarker on
-    todayMarker stroke-width:3px,stroke:#0f0,opacity:0.5
-
-    title       Adding GANTT diagram functionality to mermaid
-    %%excludes    weekends
-    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week ("sunday") or "weekends", but not the word "weekdays".)
-
-    section KR1
-    制作思维导图400张            : 2021-08-01,2021-09-30
-    制作sop : 2021-09-01,4d
-    招募实习同学: 4d
-    实习同学带教:4d
-    任务分发:4d
-
-    section KR2
-
-    技能题库配图90张 :active,2021-07-10,2021-09-31
-
-
-    section KR3
-    ijijij : 2021-08-09,30d
-    
-
-```
+# 肺结核
+## 临床表现
+  - 全身结核中毒症状：午后低热、盗汗、乏力
+  - 呼吸道症状：咳嗽、咳痰、咯血
+## 辅助检查
+  - 胸片：首选检查，病变多位于上叶尖后段、下叶背段、后基底段
+  - 痰结核分枝杆菌检查：确诊肺结核病的主要方法，培养法为“金标准”
+  - 痰结核菌素试验PPD：泛用于检出结核分枝杆菌感染，而非检出结核病
+## 治疗
+- 常用抗结核药
+  - 异烟肼 INH,H:周围神经炎（VB6对症治疗）
+  - 利福平 RFP,R:肝功损害、过敏反应
+  - 吡嗪酰胺 PZA,Z:高尿酸血症（痛风禁用）
+  - 乙胺丁醇 EMB,E:球后视神经炎
+  - 链霉素 SM,S:耳毒性、肾毒性和前庭损害
+- 标准化学治疗方案
+  - 初治涂阳：2HRZE/4HR 
+  - 复治涂阳：2HRZSE/6-10HRE

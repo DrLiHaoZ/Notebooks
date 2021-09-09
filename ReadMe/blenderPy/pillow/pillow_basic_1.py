@@ -86,3 +86,5 @@ plt.title("Original")
 
 plt.show()
 """
+im =  Image.new('L',(100,100))
+im.show()

@@ -52,3 +52,25 @@ View(flights %>% filter(month == 1, day == 1) %>%
 ######################################################################
 
 # mutate funtion is king of dplyr
+View(flights %>% select(year:day, ends_with("delay")))
+View(flights %>%
+    select(year:day, ends_with("delay")) %>%
+    mutate(gain = arr_delay - dep_delay))
+
+
+######################################################################
+########################### summarize#################################
+######################################################################
+
+## because data has NA so you should exclude them
+flights %>% summarise(mean_delay = mean(dep_delay))
+flights %>% summarise(mean_delay = mean(dep_delay, na.rm = TRUE))
+
+## use summarize together with group_by
+flights %>%
+    group_by(dest) %>%
+    summarise(
+        count = n(),
+        dist = mean(distance, na.rm = TRUE),
+        delay = mean(arr_delay, na.rm = TRUE),
+    )

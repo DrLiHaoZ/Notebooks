@@ -19,4 +19,8 @@ docs = [
     "I do not care who like bob, but I like kitty",
     "It is coffee time, bring your cup",
 ]
-print("i am fine")
+
+docs_words = [d.replace(",", "").split(" ") for d in docs]
+vocab = set(itertools.chain(*docs_words))
+v2i = {v: i for i, v in enumerate(vocab)}
+i2v = {i: v for v, i in v2i.items()}

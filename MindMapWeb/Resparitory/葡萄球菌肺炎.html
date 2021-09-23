@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Markmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+
+        }
+    </style>
+
+    <style type="text/css">
+        body {
+            background-image: url(../resource/logo.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../resource/style.min.css">
+</head>
+
+<body>
+    <svg id="mindmap"></svg>
+    <script src="../resource/npm.js"></script>
+    <script src="../resource/markmap-view.js"></script>
+
+    <script>(r => {
+            setTimeout(r);
+        })(() => {
+            const {
+                markmap,
+                mm
+            } = window;
+            const toolbar = new markmap.Toolbar();
+            toolbar.attach(mm);
+            const el = toolbar.render();
+            el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+            document.body.append(el);
+        })</script>
+    <script>((getMarkmap, getOptions, data) => {
+                    const {
+                        Markmap
+                    } = getMarkmap();
+                    window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+                })(() => window.markmap, null, { "t": "heading", "d": 1, "p": { "lines": [0, 1] }, "v": "葡萄球菌肺炎", "c": [{ "t": "heading", "d": 2, "p": { "lines": [2, 3] }, "v": "发病机制", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [3, 4] }, "v": "好发人群：有基础疾病者（糖尿病、血液 病、艾滋病等）" }, { "t": "list_item", "d": 4, "p": { "lines": [4, 5] }, "v": "致病菌：金黄色葡萄球菌（凝固酶阳性）及凝固酶阴性葡萄球菌" }, { "t": "list_item", "d": 4, "p": { "lines": [5, 6] }, "v": "致病物质：毒素（溶血毒素、杀白细胞素）、酶（血浆凝固酶：引起化脓）" }, { "t": "list_item", "d": 4, "p": { "lines": [6, 7] }, "v": "特点：易引起肺脓肿、脓胸" }] }, { "t": "heading", "d": 2, "p": { "lines": [8, 9] }, "v": "临床表现", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [9, 10] }, "v": "症状：起病急、寒战、高热、肌肉关节酸痛、咳脓痰或脓血痰" }, { "t": "list_item", "d": 4, "p": { "lines": [10, 11] }, "v": "体征", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [11, 12] }, "v": "早期体征与严重症状不平行" }, { "t": "list_item", "d": 6, "p": { "lines": [12, 13] }, "v": "后出现两肺散在湿啰音、肺实变体征" }] }] }, { "t": "heading", "d": 2, "p": { "lines": [13, 14] }, "v": "诊断", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [14, 15] }, "v": "实验室检查：白细胞计数增高、中性比增加、核左移、中毒颗粒" }, { "t": "list_item", "d": 4, "p": { "lines": [15, 16] }, "v": "X线：肺段或肺叶实变，可形成空洞（内含气液平面）" }] }, { "t": "heading", "d": 2, "p": { "lines": [16, 17] }, "v": "治疗", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [17, 18] }, "v": "首选：耐青霉素酶的半合成青霉素（苯唑西林）或头孢菌素（头孢呋辛）" }, { "t": "list_item", "d": 4, "p": { "lines": [18, 19] }, "v": "耐甲氧西林金黄色葡萄球菌（MRSA）：万古霉素、替考拉宁" }] }] })</script>
+</body>
+
+</html>

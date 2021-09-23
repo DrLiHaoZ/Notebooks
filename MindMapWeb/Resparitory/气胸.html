@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Markmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+
+        }
+    </style>
+
+    <style type="text/css">
+        body {
+            background-image: url(../resource/logo.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../resource/style.min.css">
+</head>
+
+<body>
+    <svg id="mindmap"></svg>
+    <script src="../resource/npm.js"></script>
+    <script src="../resource/markmap-view.js"></script>
+    <script>(r => {
+            setTimeout(r);
+        })(() => {
+            const {
+                markmap,
+                mm
+            } = window;
+            const toolbar = new markmap.Toolbar();
+            toolbar.attach(mm);
+            const el = toolbar.render();
+            el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+            document.body.append(el);
+        })</script>
+    <script>((getMarkmap, getOptions, data) => {
+                    const {
+                        Markmap
+                    } = getMarkmap();
+                    window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+                })(() => window.markmap, null, { "t": "heading", "d": 1, "p": { "lines": [0, 1] }, "v": "气胸", "c": [{ "t": "heading", "d": 2, "p": { "lines": [2, 3] }, "v": "病因、分类", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [3, 4] }, "v": "病因", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [4, 5] }, "v": "原发性自发性：高瘦青壮年，可有肺尖部肺大疱" }, { "t": "list_item", "d": 6, "p": { "lines": [5, 6] }, "v": "继发性自发性：继发肺内疾病（肺结核、COPD、肺癌等）" }, { "t": "list_item", "d": 6, "p": { "lines": [6, 7] }, "v": "外伤性、医源性" }] }, { "t": "list_item", "d": 4, "p": { "lines": [7, 8] }, "v": "分类", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [8, 9] }, "v": "闭合性气胸：胸膜腔内压接近大气压" }, { "t": "list_item", "d": 6, "p": { "lines": [9, 10] }, "v": "开放性气胸：胸膜腔内压等于大气压" }, { "t": "list_item", "d": 6, "p": { "lines": [10, 11] }, "v": "张力性气胸：破裂口单向活瓣，胸膜腔内压增高" }] }] }, { "t": "heading", "d": 2, "p": { "lines": [11, 12] }, "v": "临床表现", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [12, 13] }, "v": "突发胸痛，继之胸闷和呼吸困难" }, { "t": "list_item", "d": 4, "p": { "lines": [13, 14] }, "v": "大量气胸：气管健侧移位" }, { "t": "list_item", "d": 4, "p": { "lines": [14, 15] }, "v": "开放性：纵隔扑动、胸部吸吮性伤口" }, { "t": "list_item", "d": 4, "p": { "lines": [15, 16] }, "v": "张力性：气管健侧移位明显、握雪感、皮下气肿、严重呼吸循环障碍" }] }, { "t": "heading", "d": 2, "p": { "lines": [16, 17] }, "v": "诊断", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [17, 18] }, "v": "X线胸片：首选，外凸弧形气胸线，外无肺纹理，内为压缩肺" }] }, { "t": "heading", "d": 2, "p": { "lines": [18, 19] }, "v": "治疗", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [19, 20] }, "v": "保守治疗：少量、症状轻的闭合性气胸多" }, { "t": "list_item", "d": 4, "p": { "lines": [20, 21] }, "v": "胸部穿刺抽气：压缩＜20%、呼吸困难轻、心肺功能尚好的闭合性气胸" }, { "t": "list_item", "d": 4, "p": { "lines": [21, 22] }, "v": "胸腔闭式引流", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [22, 23] }, "v": "不稳定型气胸、呼吸困难明显、张力或开放气胸" }, { "t": "list_item", "d": 6, "p": { "lines": [23, 24] }, "v": "气体引流：前胸壁锁骨中线第2肋间隙" }, { "t": "list_item", "d": 6, "p": { "lines": [24, 25] }, "v": "液体引流：腋中线和腋后线6-8肋间隙" }] }, { "t": "list_item", "d": 4, "p": { "lines": [25, 26] }, "v": "开放性气胸急救：变开放为闭合（敷料封堵）+胸腔闭式引流" }, { "t": "list_item", "d": 4, "p": { "lines": [26, 27] }, "v": "张力性气胸急救：粗针头穿刺排气降压+胸腔闭式引流" }] }] })</script>
+</body>
+
+</html>

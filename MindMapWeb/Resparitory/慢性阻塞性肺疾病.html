@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Markmap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #mindmap {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+
+        }
+    </style>
+
+    <style type="text/css">
+        body {
+            background-image: url(../resource/logo.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../resource/style.min.css">
+</head>
+
+<body>
+    <svg id="mindmap"></svg>
+    <script src="../resource/npm.js"></script>
+    <script src="../resource/markmap-view.js"></script>
+
+    <script>(r => {
+            setTimeout(r);
+        })(() => {
+            const {
+                markmap,
+                mm
+            } = window;
+            const toolbar = new markmap.Toolbar();
+            toolbar.attach(mm);
+            const el = toolbar.render();
+            el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+            document.body.append(el);
+        })</script>
+    <script>((getMarkmap, getOptions, data) => {
+                    const {
+                        Markmap
+                    } = getMarkmap();
+                    window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+                })(() => window.markmap, null, { "t": "heading", "d": 1, "p": { "lines": [0, 1] }, "v": "慢性阻塞性肺疾病", "c": [{ "t": "heading", "d": 2, "p": { "lines": [2, 3] }, "v": "病因和发病机制", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [3, 4] }, "v": "病因", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [4, 5] }, "v": "吸烟（最重要）：杯状细胞增生、黏液分泌增多、纤毛功能下降" }, { "t": "list_item", "d": 6, "p": { "lines": [5, 6] }, "v": "职业粉尘和化学物质、空气污染等" }] }, { "t": "list_item", "d": 4, "p": { "lines": [6, 7] }, "v": "发病机制", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [7, 8] }, "v": "炎症机制：中性粒细胞的活化和聚集，释放弹性蛋白酶" }, { "t": "list_item", "d": 6, "p": { "lines": [8, 9] }, "v": "氧化应激：IL-8、TNF-α等炎症介质" }] }, { "t": "list_item", "d": 4, "p": { "lines": [9, 10] }, "v": "病理生理", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [10, 11] }, "v": "特征：持续性气流受限，为小气道（气道内径＜2mm）功能异常" }, { "t": "list_item", "d": 6, "p": { "lines": [11, 12] }, "v": "合并 I 型呼衰：通气/血流比例失调" }, { "t": "list_item", "d": 6, "p": { "lines": [12, 13] }, "v": "合并 II 型呼衰：阻塞性通气功能障碍" }] }] }, { "t": "heading", "d": 2, "p": { "lines": [13, 14] }, "v": "临床表现", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [14, 15] }, "v": "症状", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [15, 16] }, "v": "咳：慢性咳嗽，晨间明显，夜间阵咳" }, { "t": "list_item", "d": 6, "p": { "lines": [16, 17] }, "v": "痰：白色黏液或浆液性痰，清晨排痰较多，急性发作期呈脓痰、量大" }, { "t": "list_item", "d": 6, "p": { "lines": [17, 18] }, "v": "喘：逐渐加重的气短、呼吸困难（标志性症状）" }] }, { "t": "list_item", "d": 4, "p": { "lines": [18, 19] }, "v": "查体", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [19, 20] }, "v": "桶状胸、触诊语颤减弱、叩诊呈过清音" }] }] }, { "t": "heading", "d": 2, "p": { "lines": [20, 21] }, "v": "辅助检查", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [21, 22] }, "v": "肺功能检查（首选）", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [22, 23] }, "v": "FEV1/FVC＜70%：确定持续气流受限，评价通气功能" }, { "t": "list_item", "d": 6, "p": { "lines": [23, 24] }, "v": "FEV1%pred：评估严重程度" }, { "t": "list_item", "d": 6, "p": { "lines": [24, 25] }, "v": "RV/TLC＞40%：诊断肺气肿" }] }, { "t": "list_item", "d": 4, "p": { "lines": [25, 26] }, "v": "胸部 X 线：肺纹理增粗、紊乱或肺气肿" }, { "t": "list_item", "d": 4, "p": { "lines": [26, 27] }, "v": "血气分析：判断呼吸衰竭类型" }] }, { "t": "heading", "d": 2, "p": { "lines": [27, 28] }, "v": "并发症", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [28, 29] }, "v": "呼吸衰竭：急性加重时产生，II 型呼衰多见" }, { "t": "list_item", "d": 4, "p": { "lines": [29, 30] }, "v": "自发性气胸：呼吸困难突然加重，叩诊鼓音、听诊呼吸音消失" }, { "t": "list_item", "d": 4, "p": { "lines": [30, 31] }, "v": "慢性肺源性心脏病：缺氧致肺动脉高压、右心功能不全" }] }, { "t": "heading", "d": 2, "p": { "lines": [31, 32] }, "v": "治疗", "c": [{ "t": "list_item", "d": 4, "p": { "lines": [32, 33] }, "v": "急性加重期治疗", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [33, 34] }, "v": "抗感染（主要治疗）" }, { "t": "list_item", "d": 6, "p": { "lines": [34, 35] }, "v": "缓解严重喘息：使用支气管舒张药（沙丁胺醇、异丙托溴铵雾化）" }, { "t": "list_item", "d": 6, "p": { "lines": [35, 36] }, "v": "持续低流量吸氧：浓度 28-30%" }, { "t": "list_item", "d": 6, "p": { "lines": [36, 37] }, "v": "呼衰加重（肺性脑病）：机械通气" }] }, { "t": "list_item", "d": 4, "p": { "lines": [37, 38] }, "v": "稳定期治疗", "c": [{ "t": "list_item", "d": 6, "p": { "lines": [38, 39] }, "v": "支气管舒张药（控制症状主要措施）" }, { "t": "list_item", "d": 6, "p": { "lines": [39, 40] }, "v": "祛痰药：痰不易咳出，可降低急性加重风险" }, { "t": "list_item", "d": 6, "p": { "lines": [40, 41] }, "v": "长期家庭氧疗：提高生活质量、生存率" }] }] }] })</script>
+</body>
+
+</html>

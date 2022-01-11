@@ -11,3 +11,4 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
     geom_boxplot(mapping = aes(x = class, y = hwy)) +
     coord_flip()
+

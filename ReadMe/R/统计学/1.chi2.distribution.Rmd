@@ -1,35 +1,29 @@
----
-title: "1.chi2.distribution"
-author: "lihao"
-date: "4/28/2022"
-output: html_document
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the 
-
+gather函数非常有用！！！
 ```{r}
+library(tidyverse)
+library(magrittr)
+library(ggplot2)
+
+df <- data.frame(n = 1:1000)
+for (i in 1:5){
+  df[paste('z',i,sep = "")] <- rnorm(n = 1000)
+}
+
+df2 <- df %>%
+  map_dfr(~.x^2) %>%
+  mutate(c1 = z1) %>%
+  mutate(c2 = z1+z2) %>%
+  mutate(c3 = z1+z2+z3) %>%
+  mutate(c4 = z1+z2+z3+z4) %>%
+  mutate(c5 = z1+z2+z3+z4+z5) %>%
+  select(c1,c2,c3,c4,c5) %>%
+  gather(key = "chi2",value = "value")
+
+ggplot(df2,aes(value,colour = chi2)) + geom_density()
 
 ```
+
+
 

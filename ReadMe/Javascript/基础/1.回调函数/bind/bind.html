@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> what is bind and why bind!</h1>
+    <p>With the bind() method, an object can borrow a method from another object.
+
+        The example below creates 2 objects (person and member).
+        
+        The member object borrows the fullname method from the person object:</p>
+    <script>
+        let c1 = {
+            x : 10,
+            y: 20
+        };
+
+        let c2 = {
+            x : 1,
+            y : 2
+        };
+
+        function printCoordinate(){
+            console.log(this.x + ' ,' + this.y );
+        }
+
+        let c1_func = printCoordinate.bind(c1);
+        let c2_func = printCoordinate.bind(c2);
+
+        c1_func();
+        c2_func();
+
+    </script>
+</body>
+</html>

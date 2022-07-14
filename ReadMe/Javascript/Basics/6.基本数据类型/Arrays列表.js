@@ -34,3 +34,10 @@ function myFunction(value, index, array){
 //输出
 console.log(a4);
 
+let a5 = [1,2,3];
+const isLessThan5 = (currentValue)=>{
+    return currentValue <= 5;
+}
+let bool = a5.every(isLessThan5);
+console.log('the result for a5 is ' + bool);
+

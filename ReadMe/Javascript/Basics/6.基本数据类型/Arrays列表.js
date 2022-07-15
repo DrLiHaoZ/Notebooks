@@ -41,3 +41,8 @@ const isLessThan5 = (currentValue)=>{
 let bool = a5.every(isLessThan5);
 console.log('the result for a5 is ' + bool);
 
+//Destructuring Arrays
+
+let cars = ['ferrari', 'tesla', 'cadillac'];
+let [car1, car2, car3] = cars;
+console.log(car1, car2, car3); // Prints: ferrari tesla cadillac

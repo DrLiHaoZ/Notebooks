@@ -20,4 +20,6 @@ def copy_object(object_name:str, position):
         object_collection[i].location = positions[i]
         for o in bpy.data.objects : 
             o.select_set(False)
+    
+    return object_collection
             

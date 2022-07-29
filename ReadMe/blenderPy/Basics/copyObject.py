@@ -10,7 +10,9 @@ def copy_object(object_name:str, positions):
 
     object_collection = []
     count = len(positions)
-    obj_from = bpy.data.objects[object_name]
+    obj_from = bpy.data.objects[objec
+    
+    t_name]
     
     #然后逐一复制并注意取消选择
     for i in range(count): 

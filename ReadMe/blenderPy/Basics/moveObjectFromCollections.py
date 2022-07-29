@@ -1,4 +1,4 @@
-from ast import Pass
+
 import bpy
 
 collectionFrom = bpy.data.collections['collection1']
@@ -9,11 +9,12 @@ to_unlink = []
 for object in collectionFrom.objects:
     try:
         collectionTo.objects.link(object)
+        collectionFrom.objects.unlink(object)
     except RuntimeError:
-        Pass
+        pass
     to_unlink.append(object)
 
-for object in to_unlink:
-    collectionFrom.objects.unlink(object)
+#for object in to_unlink:
+    
 
-bpy.data.collections.remove(collectionFrom)
+#bpy.data.collections.remove(collectionFrom)
